@@ -7,6 +7,11 @@
     background-color: #ffffa5;
     border:none;
 }
+.card.completed,
+.card.completed .crd-footer{
+    background-color:#eeeea5 ;
+    color:#ddd;
+}
 
 .card-footer{
     font-size: 11px;
@@ -16,4 +21,8 @@
 i{
     color:#cc0000;
 
+}
+
+.fa-check{
+    color:#00ff00;
 }

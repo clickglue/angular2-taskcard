@@ -17,7 +17,13 @@ var AppComponent = (function () {
             new task_1.Task("Walk the turtle", false),
             new task_1.Task("Help", false),
         ];
+        this.currentTask = new task_1.Task(null, false);
     }
+    AppComponent.prototype.addTask = function () {
+        var task = new task_1.Task(this.currentTask.content, this.currentTask.completed);
+        this.tasks.push(task);
+        this.currentTask.content = null;
+    };
     AppComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
