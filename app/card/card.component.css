@@ -1,0 +1,19 @@
+.card{
+    border-radius: 3;
+    font-family: 'Courier';
+}
+
+.card, .card-footer{
+    background-color: #ffffa5;
+    border:none;
+}
+
+.card-footer{
+    font-size: 11px;
+    text-align: left;
+    background-color: #eeeea5;
+}
+i{
+    color:#cc0000;
+
+}

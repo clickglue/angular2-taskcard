@@ -9,14 +9,21 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var task_1 = require('./model/task');
 var AppComponent = (function () {
     function AppComponent() {
+        this.tasks = [
+            new task_1.Task("Buy a monkey", false),
+            new task_1.Task("Walk the turtle", false),
+            new task_1.Task("Help", false),
+        ];
     }
     AppComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
             selector: 'my-app',
-            templateUrl: 'app.component.html'
+            templateUrl: 'app.component.html',
+            styleUrls: ['app.component.css']
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);
