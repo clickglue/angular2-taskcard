@@ -12,15 +12,16 @@ var core_1 = require('@angular/core');
 var task_1 = require('./model/task');
 var AppComponent = (function () {
     function AppComponent() {
-        this.tasks = [
-            new task_1.Task("Buy a monkey", false),
-            new task_1.Task("Walk the turtle", false),
-            new task_1.Task("Help", false),
-        ];
-        this.currentTask = new task_1.Task(null, false);
+        this.tasks = [];
+        this.currentTask = new task_1.Task(null, false, false);
     }
     AppComponent.prototype.addTask = function () {
-        var task = new task_1.Task(this.currentTask.content, this.currentTask.completed);
+        for (var i = 0; i < this.tasks.length; i++) {
+            if (this.tasks[i].hidden === true) {
+                this.tasks.splice(i, 1);
+            }
+        }
+        var task = new task_1.Task(this.currentTask.content, this.currentTask.completed, false);
         this.tasks.push(task);
         this.currentTask.content = null;
     };

@@ -8,18 +8,21 @@ import { Task } from './model/task';
     styleUrls: ['app.component.css']
 })
 
-export class AppComponent {
-    private tasks = [
-        new Task("Buy a monkey", false),
-        new Task("Walk the turtle", false),
-        new Task("Help", false),
-    ]
-    private currentTask = new Task(null, false);
 
-    addTask(){
-        let task=new Task(this.currentTask.content,this.currentTask.completed);
+
+export class AppComponent {
+    public tasks: Task[] = [];
+    private currentTask = new Task(null, false, false);
+
+    addTask() {
+        for (let i = 0; i < this.tasks.length; i++) {
+            if (this.tasks[i].hidden === true) {
+                this.tasks.splice(i, 1);
+            }
+        }
+
+        let task = new Task(this.currentTask.content, this.currentTask.completed, false);
         this.tasks.push(task);
-        this.currentTask.content=null;
+        this.currentTask.content = null;
     }
-    
 }

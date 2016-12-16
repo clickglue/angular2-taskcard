@@ -16,6 +16,10 @@ var CardComponent = (function () {
     CardComponent.prototype.statusToggle = function () {
         this.task.completed = !this.task.completed;
     };
+    CardComponent.prototype.hide = function () {
+        console.log(this.task.content);
+        this.task.hidden = true;
+    };
     __decorate([
         core_1.Input(), 
         __metadata('design:type', task_1.Task)

@@ -1,6 +1,7 @@
 <div class="col-sm-3">
-    <div class="card" (click)="statusToggle()" [class.completed]="task.completed">
+    <div class="card" (click)="statusToggle()" [class.completed]="task.completed" [class.hidden]="task.hidden">
         <div class="card-block">
+            <div class="delete" (click)="hide()"><i class="fa fa-trash" aria-hidden="true"></i></div>
             <p>{{task.content}}</p>
         </div>
         <div class="card-footer">

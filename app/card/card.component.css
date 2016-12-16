@@ -1,6 +1,7 @@
 .card{
     border-radius: 3;
     font-family: 'Courier';
+    cursor:pointer;
 }
 
 .card, .card-footer{
@@ -25,4 +26,19 @@ i{
 
 .fa-check{
     color:#00ff00;
+}
+
+.delete{
+    width: 2em;
+    height: 2em;
+    position: absolute;
+    top: 0.5em;
+    right: 0.5em;
+    text-align: center;
+    padding-top:0.25em;
+   background-color: #eeeea5; 
+}
+
+.hidden{
+    display: none;
 }
