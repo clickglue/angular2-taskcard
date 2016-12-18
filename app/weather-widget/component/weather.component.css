@@ -1,0 +1,43 @@
+.card{
+    box-shadow: 2px 2px 5px 0 rgba(0,0,0,.24);
+    transition:background-color 0.5s;
+    cursor:pointer;
+    font-size:100%;
+
+}
+.card,
+.card-header,
+.card-footer {
+    border:none;
+    border-radius:0;
+}
+
+.card-header,
+.card-footer{
+    padding: 1rem .5rem;
+    background-color: rgba(0,0,0,.05);
+}
+
+.card-block{
+    padding:1rem;
+}
+
+.card-block,
+.card-footer{
+    text-align:center;
+}
+
+p{
+    margin:.2rem;
+    text-transform:uppercase;
+}
+
+#icon{
+    width: 100%;
+}
+#indicator{
+    position: relative;
+}
+.small{
+    font-size: .5rem;
+}
